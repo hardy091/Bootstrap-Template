@@ -154,7 +154,7 @@ transition-property: color;
 vertical-align: middle;
 }
 .hvr-bounce-to-right::before {
-background: none repeat scroll 0 0 #31B0D5;
+background: none repeat scroll 0 0 #0277B5;
 bottom: 0;
 color: #fff;
 content: "";
@@ -173,7 +173,7 @@ z-index: -1;
 color: white;
 }
 .hvr-bounce-to-right:hover::before, .hvr-bounce-to-right:focus::before, .hvr-bounce-to-right:active::before {
-transform: scaleX(1);border-radius: 0.3em;border: 1px solid #31B0D5;
+transform: scaleX(1);border-radius: 0.3em;border: 1px solid #0277B5;
 transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
 }
 
@@ -306,7 +306,6 @@ transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
 
 .testimonials .testimonial-info img {
     width: 100px;
-    /*height: 60px;*/
     padding: 2px;
     margin-right: 15px;
     border: solid 1px #ccc;
@@ -378,3 +377,25 @@ transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
 }
 
 
+.intro .fa {
+    border: 2px solid #00a8e0;
+    border-radius: 50%;
+    color: #00a8e0;
+    display: inline-block;
+    font-size: 32px;
+    height: 80px;
+    margin-bottom: 10px;
+    padding: 22px;
+    transition: all 0.4s ease-in 0s;
+    width: 80px;
+    margin-bottom: 20px;
+}
+.app-block {
+    margin-bottom: 30px;
+    text-align: center;
+}
+.app-block:hover .fa {
+    border: 2px solid transparent;
+    box-shadow: 0 0 0 50px #00a8e0 inset;
+    color: #fff;
+}
