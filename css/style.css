@@ -238,14 +238,21 @@ transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
     overflow: hidden;
     padding: 15px 15px 10px;
 }
+.service, 
+.service [class^="fa"], 
+.service:hover [class^="fa"] {
+    transition: all 0.6s linear 0s;
+}
+.service:hover [class^="fa"] {
+    color: rgba(36, 144, 175, 0.7);
+    transform: rotateY(360deg);
+}
 .service:hover {
     background: none repeat scroll 0 0 #fcfcfc;
     box-shadow: 0 0 5px #ddd;
     transition: box-shadow 0.2s ease-in-out 0s;
 }
-.service:hover i {
-    color: #656565;
-}
+
 .service .desc {
     overflow: hidden;
     padding: 0 15px;
@@ -369,3 +376,5 @@ transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
     border-right: 22px inset transparent;
     border-top: 22px solid #2490AF;
 }
+
+

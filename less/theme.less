@@ -112,10 +112,12 @@ h1, h2, h3, h4, h5, h6 {
     .nav {
     	li {
     		a {
+    			padding: 10px 10px;
+    			line-height: 25px;
     			.heading-font;
     			font-weight: 400;
     			letter-spacing: 1px;
-    			color: @gray;
+    			color: @gray-darkest;
     			&:hover,
     			&:focus {
     				color: @brand-primary;
@@ -127,10 +129,10 @@ h1, h2, h3, h4, h5, h6 {
 	.navbar-nav>.active>a {
 		border-radius: 0;
 		color: @gray-darkest;
-		border-bottom: 2px solid @brand-primary;
-		    -webkit-transition: all 0.3s ease;
-		    -moz-transition: all 0.3s ease;
-		    transition: all 0.3s ease;
+		border-bottom: 4px solid @brand-primary;
+		    -webkit-transition: all 0.15s ease-in-out 0s;
+		    -moz-transition: all 0.15s ease-in-out 0s;
+		    transition: all 0.15s ease-in-out 0s;
 		background-color: white;
 		display: inline-block;
 	}
@@ -138,11 +140,21 @@ h1, h2, h3, h4, h5, h6 {
 	.navbar-nav>.active>a:focus {
 		border-radius: 0;
 		color: @gray-darkest;
-		border-bottom: 2px solid @brand-primary;
-		    -webkit-transition: all 0.3s ease;
-		    -moz-transition: all 0.3s ease;
-		    transition: all 0.3s ease;
-		background-color: white;
+ 		background-color: white;
+	}
+}
+.hvrNav-stat {
+    border-bottom: 0 solid;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 50px;
+    line-height: 1;
+    transition: all 0.15s ease-in-out 0s;
+	&:hover, 
+	&:focus {
+    	display: inline-block;
+	    text-decoration: none;
+	    border-bottom-width: 4px;
 	}
 }
 
@@ -157,13 +169,14 @@ h1, h2, h3, h4, h5, h6 {
         border-bottom: 2px solid lighten(@gray, 20%);
         box-shadow: 0 0 2px @gray;
 	    .navbar-brand {
-	        font-size: 2em;
+	        font-size: 20px;
 	        -webkit-transition: all 0.3s;
 	        -moz-transition: all 0.3s;
 	        transition: all 0.3s;
 	    }
 		.navbar-nav>.active>a {
 			border-radius: 0;
+			display: inline-block;
 		}
     }
     .navbar-default.navbar-shrink {
@@ -173,6 +186,15 @@ h1, h2, h3, h4, h5, h6 {
 	        font-size: 1.5em;
 	    }    
 	}
+    #portfolio {
+        .portfolio-item {
+            margin: 0 0 30px;
+        }
+    }
+	section {
+		padding: 150px 0;
+	}    
+    .layer_slider{padding-top: 100px}	
 }
 
 section {
@@ -190,12 +212,6 @@ section {
 		font-weight: 400;
 		margin-bottom: 75px;
     }
-}
-
-@media(min-width:768px) {
-	section {
-		padding: 150px 0;
-	}
 }
 
 // Portfolio Section
@@ -263,13 +279,6 @@ section {
     }
 }
 
-@media(min-width:767px) {
-    #portfolio {
-        .portfolio-item {
-            margin: 0 0 30px;
-        }
-    }
-}
 
 // Team Section
 
@@ -807,9 +816,12 @@ ul.social-buttons {
 }
 
 
-
-@media(min-width:767px) {
-    #portfolio .portfolio-item {
-        margin: 0 0 30px;
-    }
+@media(max-width:640px) {
+    .layer_slider{padding-top: 50px}
+	.hvrNav-stat {
+		&:hover, 
+		&:focus {
+			border-bottom: none;
+			}
+		}    
 }
